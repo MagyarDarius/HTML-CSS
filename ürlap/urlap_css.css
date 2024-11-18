@@ -1,0 +1,40 @@
+#piros{
+    background-color: #c14646;
+}
+.zold{
+    background-color: #59bb3d;
+}
+.sarga{
+    background-color: #becc12;
+}
+body{
+    font-size: 20px;
+}
+table{
+    border: black, solid, 2px;
+}
+td{
+    border: black,solid, 2px;
+}
+header, footer{
+    background-color: #229e00;
+    border: black,solid, 2px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}   
+section{
+    border: black,solid,2px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+a:hover, a:visited, a:active, a:link{
+    color: black;
+    text-decoration: underline;
+}
+footer{
+    text-align: center;
+}

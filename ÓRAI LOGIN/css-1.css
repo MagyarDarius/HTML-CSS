@@ -1,0 +1,57 @@
+#fejlec{
+    background: url(header_bg.png);
+    background-size: cover;
+    min-height: 100px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+#bar{
+    background: #0e6eeb;
+    min-height: 40px;
+    position: fixed;
+    top: 114px;
+    left: 0;
+    width: 100%;
+
+}
+#lablec{
+    background: #090741;
+    min-height: 150px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+#copyright{
+    max-width: 80px;
+    max-height: 80px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+}
+#copy{
+    margin-left: 10px;
+}
+a:hover{
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+}
+a:link, a:active, a:visited{
+    color: white;
+    text-decoration: none;
+}
+#szoveg{
+    position: fixed;
+    top: 180px;
+}
+#tablazat{
+    position: fixed;
+    left: 60%;
+    top: 180px;
+    margin-right: 100px;
+}

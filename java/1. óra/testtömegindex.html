@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Feladat</title>
+</head>
+<body>
+    <script>
+        let testtomeg = prompt("Add meg a testtömeged (KG-ban)")
+        let testmagassag = prompt("Add meg a magasságod (Cm-ben)")
+        let testmagassagm = testmagassag / 100
+        let testmagassagnegyzet = testmaggasagm * testmaggasagm
+        document.write("A testtömegindexed: ", testtomeg / testmagassagnegyzet)
+    </script>
+</body>
+</html>

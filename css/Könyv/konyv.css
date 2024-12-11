@@ -1,0 +1,43 @@
+body{
+    background: url(konyv_hatter.jpg);
+    background-repeat: repeat;
+    background-size: 500px;
+}
+#keret{
+    width: 720px;
+    background: #CA8;
+    position: absolute;
+    left: 576px;
+    box-shadow: 10px black;
+}
+.konyvajánlo{
+    text-align: center;
+}
+.konyv{
+    background: #eca;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 3px;
+    box-shadow: 3px 5px 5px black;
+}
+.kiemelt{
+    font-weight: bold;
+}
+img{
+    width: 120px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.elvalaszto{
+    height: 102px;
+}
+p,h1,h2,h3{
+    text-indent: 25px;
+    color: rgb(55, 54, 53);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+h1,h2,h3{
+    text-indent: 25px;
+}

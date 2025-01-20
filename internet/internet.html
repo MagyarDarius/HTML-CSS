@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Van-e Internet az űrben?</title>
+    <link rel="stylesheet" href="internet.css" type="text/css">
+</head>
+<body>
+
+    <h1>Van-e Internet az űrben?</h1>
+    <p>Nyomd meg a gombot a válasz megjelenítéséhez!</p>
+
+    <button class="button" onclick="showAnswer()">Válasz megjelenítése</button>
+
+    <div class="answer" id="answer"></div>
+
+    <script>
+        function showAnswer() {
+            var answer = document.getElementById("answer");
+            answer.textContent = "Igen, az űrben is létezik internet, bár a kapcsolat lassabb és bizonyos területeken nem mindig megbízható. A Nemzetközi Űrállomás (ISS) például a földi műholdas hálózatot használja internetkapcsolatának biztosítására.";
+        }
+    </script>
+
+</body>
+</html>

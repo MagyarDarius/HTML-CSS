@@ -1,0 +1,7 @@
+#left-bar{
+    height: 1080px;
+    background: red;
+    width: 100px;
+    float: left;
+    position: fixed;
+}

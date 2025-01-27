@@ -3,45 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>projekt</title>
+    <title>Kő Papír Olló</title>
     <link rel="stylesheet" href="projekt.css" type="text/css">
 </head>
 <body>
     <h1>Válasz!</h1>
         
-        <input type="button" id="ko" value="Kő">
-        <!--ko = 0-->
-        <input type="button" id="papir" value="Papír">
-        <!--papir = 1-->
-        <input type="button" id="ollo" value="Olló">
-        <!--ollo = 2-->
+    <button id="ko" onclick="jatek('kő')">Kő</button>
+    <button id="papir" onclick="jatek('papír')">Papír</button>
+    <button id="ollo" onclick="jatek('olló')">Olló</button>
+
+    <div id="eredmeny_iras"></div>
+        
+    <div id="Új játék" style="display: none;"><button onclick="ujjatek()">Új játék!</button></div>
+    <button id="szinváltás" onclick="szinkapcsolo()">Színváltás</button>
 
     <script>
-        
-        document.getElementById('ko').onclick = function(){
-            let dontes = 0;
-        document.getElementById('ko').disabled = true;
-        document.getElementById('papir').disabled = true;
-        document.getElementById('ollo').disabled = true;
+        // id
+        let ko = document.getElementById('ko');
+        let papir = document.getElementById('papir');
+        let ollo = document.getElementById('ollo');
+
+        // játék
+        function jatek(dontes) {
+            tiltas();
+            const lehetosegek = ['kő', 'papír', 'olló'];
+            const random = lehetosegek[Math.floor(Math.random() * 3)];
+
+            let eredmeny = '';
+            if (dontes == random) {
+                eredmeny = 'Döntetlen! Te Választottad: '+ dontes + ' A gép választotta: '+ random;
+            } else if (
+                (dontes == 'kő' && random == 'olló') ||
+                (dontes == 'papír' && random == 'kő') ||
+                (dontes == 'olló' && random == 'papír')
+            ) {
+                eredmeny = 'Nyertél! Te Választottad: ' + dontes + ' A gép választotta: '+ random;
+            } else {
+                eredmeny = 'Vesztettél! Te Választottad: '+ dontes+ ' A gép választotta: '+ random;
+            }
+
+            document.getElementById('eredmeny_iras').innerHTML = eredmeny;
+            document.getElementById('Új játék').style.display = 'block';
         }
-        
-        document.getElementById('papir').onclick = function(){
-            let dontes=1;
-        document.getElementById('ko').disabled = true;
-        document.getElementById('papir').disabled = true;
-        document.getElementById('ollo').disabled = true;
+
+        // tiltás
+        function tiltas() {
+            ko.disabled = true;
+            papir.disabled = true;
+            ollo.disabled = true;
         }
-        document.getElementById('ollo').onclick = function(){
-            let dontes=2;
-        document.getElementById('ko').disabled = true;
-        document.getElementById('papir').disabled = true;
-        document.getElementById('ollo').disabled = true;
+
+        // új játék
+        function ujjatek() {
+            ko.disabled = false;
+            papir.disabled = false;
+            ollo.disabled = false;
+
+            document.getElementById('eredmeny_iras').innerHTML = '';
+            document.getElementById('Új játék').style.display = 'none';
         }
-        function randomizer (szam){
-            return Math.floor(Math.random() * szam)
+        let alapszin = true;
+
+        function szinkapcsolo() {
+            const body = document.body;
+
+            if (alapszin) {
+                body.style.background = "linear-gradient(135deg, #4b6cb7, #182848)"; // Alternatív színek
+                alapszin = false;
+            } else {
+                body.style.background = "linear-gradient(135deg, #ff7eb3, #ff758c)"; // Eredeti színek
+                alapszin = true;
+            }
         }
-        let veletlen = randomizer(3);
     </script>
-    
 </body>
 </html>

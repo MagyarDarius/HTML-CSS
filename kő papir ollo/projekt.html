@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projekt</title>
+    <link rel="stylesheet" href="projekt.css" type="text/css">
+</head>
+<body>
+    <h1>Válasz!</h1>
+        
+        <input type="button" id="ko" value="Kő">
+        <!--ko = 0-->
+        <input type="button" id="papir" value="Papír">
+        <!--papir = 1-->
+        <input type="button" id="ollo" value="Olló">
+        <!--ollo = 2-->
+
+    <script>
+        
+        document.getElementById('ko').onclick = function(){
+            let dontes = 0;
+        document.getElementById('ko').disabled = true;
+        document.getElementById('papir').disabled = true;
+        document.getElementById('ollo').disabled = true;
+        }
+        
+        document.getElementById('papir').onclick = function(){
+            let dontes=1;
+        document.getElementById('ko').disabled = true;
+        document.getElementById('papir').disabled = true;
+        document.getElementById('ollo').disabled = true;
+        }
+        document.getElementById('ollo').onclick = function(){
+            let dontes=2;
+        document.getElementById('ko').disabled = true;
+        document.getElementById('papir').disabled = true;
+        document.getElementById('ollo').disabled = true;
+        }
+        function randomizer (szam){
+            return Math.floor(Math.random() * szam)
+        }
+        let veletlen = randomizer(3);
+    </script>
+    
+</body>
+</html>

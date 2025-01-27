@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vercsoport</title>
+</head>
+<body>
+    <h1>A Vércsoportok jellemzői</h1>
+    <ul>
+        <li id="A">
+            A-vércsoportod úgy lehet, ha mindkét szülőtől A típust örökölsz, vagy az egyik szülőtől A-t, a másik szülőtől pedig 1-st.
+        </li>
+        <li id="B">
+            B-vércsoportod úgy lehet, ha mindkét szülőtől B típust örökölsz, vagy az egyik szülőtől B-t, a másik szülőtől pedig 0-st.
+        </li>
+        <li id="AB">
+            AB-vércsoportod úgy lehet, ha az egyik szülőtől a-t, a másiktól B-t örökölsz.
+        </li>
+        <li id="nulla">
+            0-s vércsoportod úgy lehet, ha mindkét szülőd vércsoportja 0-s.
+        </li>
+    </ul>
+    <script>
+        let vercsoport = prompt("Milyen vércsoportod van?(A, B, AB, 0)");
+        let A =document.getElementById('A');
+        let B =document.getElementById('B');
+        let AB =document.getElementById('AB');
+        let nulla = document.getElementById('nulla');
+        if (vercsoport == "A"){
+            A.style.backgroundColor = "yellow";
+            A.style.fontWeight = "bold";
+            A.style.border = "1px solid blue";
+        }
+        else if(vercsoport == "B"){
+            B.style.backgroundColor = "yellow";
+            B.style.fontWeight = "bold";
+            B.style.border = "1px solid blue";
+        }
+        else if(vercsoport == "AB"){
+            AB.style.backgroundColor = "yellow";
+            AB.style.fontWeight = "bold";
+            AB.style.border = "1px solid blue";
+        }
+        else{
+            nulla.style.backgroundColor = "yellow";
+            nulla.style.fontWeight = "bold";
+            nulla.style.border = "1px solid blue"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js gyakorlás</title>
+</head>
+<body>
+    <script>
+        //összegzés
+        let osszeg  = 0;
+        for(let i = 1;i<=5;i++){
+            osszeg += i;
+        }
+        console.log("Az összeg: ", osszeg);
+        //kor
+        let kor = prompt("Hány éves vagy?")
+        if(kor>18){
+            alert("Felnőtt vagy!")
+
+        }
+        else{
+            alert("Gyerek vagy csicska")
+        }
+        // dolgozat
+        let doga = prompt("Hány százalékos lett a dolgozat")
+        if(doga >= 90){
+            alert("Kiválo lett a dolgozat")
+        }
+        else if(doga >= 75){
+            alert("jó lett a dolgozat")
+        }
+        else if(doga>= 60){
+            alert("közepes lett a dolgozat")
+        }
+        else if(doga>=40){
+            alert("elégséges lett a dologzat")
+        }
+        else{
+            alert("Megbuktál kutya")
+        }
+    </script>
+</body>
+</html>

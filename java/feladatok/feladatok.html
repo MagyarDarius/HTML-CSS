@@ -50,9 +50,8 @@
         }
         */
         /* 8. feladat
-        const nyolc = 8;
         for (let i= 1; i<=10;i++){
-            document.write(i, "*", nyolc, "=", i*nyolc, "\n",)
+            document.write(i, "*", 8, "=", i*8, "<br>")
         }
         */
         /* 9. feladat
@@ -67,7 +66,65 @@
             }
         }
         */
-        
+        /* 11. feladat
+        for(let i = 1; i<145;i++){
+            if(144%i == 0){
+                document.write(i, " ")
+            }
+        }
+        */
+        /* 12. feladat
+        for(let i = 1;i<21; i++){
+            document.write(2**i, " ")
+        }
+        */
+        /* 13.feladat
+        let kulonbseg=1;
+        for(let i = 1;i<26;i++){
+            document.write(kulonbseg, " ");
+            kulonbseg=kulonbseg+i;
+        }
+        */
+        /* 14. feladat
+        let elso = 1;
+        let masodik = 2;
+        document.write(elso, " ", masodik, " ")
+        for (let i = 2; i<18;i++){
+            let harmadik = (elso+masodik);
+            document.write(harmadik, " ")
+            elso=masodik
+            masodik=harmadik
+        }
+        */
+        /* 15.feladat
+        let ora= 8;
+        const perc=15;
+        for (let i =0;i<9;i++){
+            document.write(ora,":", perc, " ")
+            ora++;
+        }
+        */
+        let ora=8;
+        let perc="20";
+        document.write("8:00", " ")
+        for (let i = 0;i<12;i++){
+            if(perc==20){
+                document.write(ora, ":", perc, " ")
+                perc= "40"
+            }
+            else{
+            if(perc== 40){
+                document.write(ora,":", perc, " ")
+                perc = "00"
+                ora++;
+            }
+            else{
+                document.write(ora, ":", perc, " ")
+                perc = "20";
+                
+            }
+            } 
+        }
     </script>
 </body>
 </html>

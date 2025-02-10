@@ -104,6 +104,7 @@
             ora++;
         }
         */
+       /* 16. feladat
         let ora=8;
         let perc="20";
         document.write("8:00", " ")
@@ -125,6 +126,44 @@
             }
             } 
         }
+        */
+        /* 17. feladat
+        let nulla=0
+        let ora=8
+        let perc="00"
+        document.write(nulla,ora, ":", perc, " ")
+        perc="50"
+        document.write(nulla,ora, ":", perc, " ")
+        ora=9
+        perc="40"
+        document.write(nulla, ora,":", perc, " ")
+        for(let i = 1;i<=10;i++){
+                if(perc== "50"){
+                ora++;
+                perc="40"
+            }
+            else if(perc=="40"){
+                ora++;
+                perc="30"
+            }
+            else if(perc == "30"){
+                ora++;
+                perc="20"
+            }
+            else if (perc== "20"){
+                ora++;
+                perc="10"
+            }
+            else if(perc== "10"){
+                ora++;
+                perc="00"
+            }
+            else{
+                perc="50"
+            }
+            document.write(ora,":", perc, " ")
+        }
+        */
     </script>
 </body>
 </html>

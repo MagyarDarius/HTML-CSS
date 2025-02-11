@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+}
+header{
+    text-align: center;
+    background-color: rgb(72, 133, 117);
+    width: 100%;
+}
+footer{
+    background-color: rgb(72, 133, 117);
+    text-align: justify;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#header_szoveg{
+    font-size: 20px;
+}
+#nav{
+    background-color: rgb(190, 199, 137);
+}

@@ -1,0 +1,14 @@
+body{
+    margin: auto;
+}
+#gomb{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    position: fixed;
+    left: 45%;
+    top: 40%;
+}
+div{
+    text-align: center;
+}

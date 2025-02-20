@@ -3,23 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="The button.css">
     <title>THE BUTTON</title>
 </head>
 <body>
-    
-    <button name="button"></button>
+    <div>
+        <p>Count: <span id="count">0</span></p>
+        <p>Total: <span id="total">0</span></p>
+        <p>Resets: <span id="reset">0</span></p>
+    </div>
+    <button id="gomb" name="button" onclick="szam(); total(); reset(); change();"></button>
+    <button onclick="kiiras()"></button>
     <script>
-        let count= 0;
-        document.getElementsByName('button').onclick = szamolas;
-
-        function szamolas(){
-            if(Math.random()* 100 > count){
-                count=0;
-            }
-            else{
-                count++;
-            }
+        let total = 0;
+        let szam= 0;
+        let reset=0;
+        const szamolas = document.getElementById("count")
+        const teljes = document.getElementById("total")
+        const ujra = document.getElementById("reset")
+        let random = Math.floor(Math.random()* 101)
+        function plus(){
+            szam++;
         }
+        function total(){
+            total++;
+        }
+        function reset(){
+            let random = Math.floor(Math.random()* 101)
+            if (random<szam){
+                szam=0;
+            }
+            reset++;
+        }
+        function change(){
+           
+        }
+        function kiiras(){
+            console.log(szam)
+        }
+
     </script>
 </body>
 </html>

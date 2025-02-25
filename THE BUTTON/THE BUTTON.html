@@ -12,36 +12,15 @@
         <p>Total: <span id="total">0</span></p>
         <p>Resets: <span id="reset">0</span></p>
     </div>
-    <button id="gomb" name="button" onclick="szam(); total(); reset(); change();"></button>
-    <button onclick="kiiras()"></button>
+    <button id="gomb" name="button" onclick="program()"></button>
     <script>
-        let total = 0;
-        let szam= 0;
-        let reset=0;
-        const szamolas = document.getElementById("count")
-        const teljes = document.getElementById("total")
-        const ujra = document.getElementById("reset")
-        let random = Math.floor(Math.random()* 101)
-        function plus(){
+        var szam = 0;
+        function program(){
+            let random = Math.floor(Math.random()*101)
             szam++;
+            document.getElementById("count").textContent=count
+            setInterval(program, 1000)
         }
-        function total(){
-            total++;
-        }
-        function reset(){
-            let random = Math.floor(Math.random()* 101)
-            if (random<szam){
-                szam=0;
-            }
-            reset++;
-        }
-        function change(){
-           
-        }
-        function kiiras(){
-            console.log(szam)
-        }
-
     </script>
 </body>
 </html>

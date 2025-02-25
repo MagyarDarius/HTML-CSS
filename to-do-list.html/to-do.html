@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do-list</title>
+    <link rel="stylesheet" href="to-do.css">
+</head>
+<body>
+    <div id="kocka">
+    <h1>Teendők:</h1>
+    <input type="text" placeholder="Adj hozzá egy tenedőt" id="szoveg">
+    <button id="hozzadas">Add hozzá</button>
+    <ul id="lista">
+
+    </ul>
+    </div>
+    
+    <script>
+        const szoveg = document.getElementById("szoveg")
+        const hozzadas = document.getElementById("hozzadas")
+        const lista = document.getElementById("lista")
+        let Teendők = []
+        function ures(){
+            lista.innerHTML = ''
+        }
+    </script>
+</body>
+</html>

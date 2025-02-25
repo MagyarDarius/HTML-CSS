@@ -18,7 +18,27 @@ footer{
 }
 #header_szoveg{
     font-size: 20px;
+    color: black;
 }
 #nav{
-    background-color: rgb(190, 199, 137);
+    background-color: rgb(129, 138, 80);
+}
+h1{
+    font-size: 25px;
+    margin-left: 20px;
+}
+p{
+    font-size: 15px;
+    margin-left: 20px;
+}
+#fooldal{
+    color: black;
+    text-decoration: none;
+}
+#cim{
+    margin: 10px;
+
+}
+img{
+    
 }

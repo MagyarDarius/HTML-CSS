@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE BUTTON</title>
+</head>
+<body>
+    <button id="gomb">asd</button>
+    <p><span id="jelenleg">Current:</span></p>
+    <script>
+        let current = 0;
+        let gomb = document.getElementById('gomb')
+        function plusone(){
+            if(gomb.clicked == true){
+                current++;
+                document.getElementById('jelenleg').innerHTML = 5 + 6;
+                updateText();
+            }
+        }
+        gomb.onclick = plusone;
+        console.log(current)
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SZESZI</title>
+</head>
+<body>
+    <h1>Szigeti Endre Technikum</h1>
+    <h2>11.A szoftverfejlesztők</h2>
+    <ul id="nevsor">
+
+    </ul>
+    <button id="gomb" onclick="vilagos()">Sötét mód</button>
+    <script>
+        var letszam = parseInt(prompt("A csoport létszáma"));
+        const nevek = new Array(letszam)
+        const list = document.getElementById("nevsor");
+        for(let i = 0;i<letszam;i++){
+            var nev = prompt(i+1 +". keresztnév");
+            const li = document.createElement("li");
+            li.id = nev.trim();
+            li.innerHTML = nev;
+            list.appendChild(li);
+            nevek[i] = nev.trim();
+        }
+        var sajat = prompt("A saját keresztneved:").trim();
+        for(let i = 0;i<letszam;i++){
+            if (sajat==nevek[i]){
+                document.getElementById(sajat).style.color="red"
+                break;
+            }
+        }
+        var gomb = document.getElementById("gomb")
+        
+        function vilagos(){
+            document.body.style.background = "#000000"
+            document.body.style.color="white";
+            gomb.innerText = "Világos mód"
+            gomb.onclick = sotet;
+        }
+        function sotet(){
+            document.body.style.background = "#ffffff";
+            document.body.style.color="black";
+            gomb.innerText = "Sötét mód"
+            gomb.onclick = vilagos;
+        }
+    </script>
+</body>
+</html>

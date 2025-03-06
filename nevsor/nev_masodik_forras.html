@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat</title>
+</head>
+<body>
+    <h1>Szigeti Endre  Technikum</h1>
+    <h2>11.A osztály szoftverfejlesztők</h2>
+    <ul>
+        <li id="József">József</li>
+        <li id="Gergő">Gergő</li>
+        <li id="Róbert">Róbert</li>
+        <li id="Dárius">Dárius</li>
+        <li id="Lívia">Lívia</li>
+        <li id="Bence">Bence</li>
+        <li id="Dominik">Dominik</li>
+    </ul>   
+    <p id="kiiras"></p>
+    <script>
+        const nevek = ["József", "Gergő", "Róbert", "Dárius", "Lívia", "Bence", "Dominik"];
+        var nev = prompt("Kérlek add meg a neved:")
+        var count = nev.length;
+        var szam = 0;
+        for (let i = 0; i<7;i++){
+            if(nev == nevek[szam]){
+                document.getElementById(nev).style.fontWeight = "bold";
+                document.getElementById("kiiras").innerText = nev.repeat(count) + " ";
+            }
+            szam++;
+        }
+    </script>
+</body>
+</html>

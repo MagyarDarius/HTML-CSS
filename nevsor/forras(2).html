@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat</title>
+    <style>
+        body {
+            font-family: cursive;
+            background-color: goldenrod;
+            color: beige;
+        }
+        ul {
+            width: 170px;
+            margin: auto;
+        }
+        h1, h2{
+            text-align: center;            
+        }        
+    </style>
+</head>
+<body>
+    <h1>Szigeti Endre Technikum</h1>
+    <h2>11.A osztály szoftverfejlesztők</h2>
+    <main>
+        <ul id="nevsor">
+            <li>Baliga József</li>
+            <li>Feke Gergő</li>
+            <li>Gyebnár Róbert</li>
+            <li>Magyar Dárius</li>
+            <li>Mező Lívia Judit</li>
+            <li>Szabó Bence Dávid</li>
+            <li>Vida Dominik</li>          
+        </ul>
+        <form style="text-align: center;">
+            <label for="bevitel">Új diák neve:</label>
+            <input type="text" id="bevitel">
+            <button type="button" onclick="felvesz()">Felvesz</button>
+        </form>
+        <form style="text-align: center;"><button type="button" onclick="torles()">Utolsó diák törlése</button></form>
+    </main>
+    <script>
+        function felvesz(){
+            const list = document.getElementById("nevsor");
+            const name = document.getElementById("bevitel");
+            const li = document.createElement("li");
+            li.innerHTML = name.value;
+            list.appendChild(li);
+            name.value = "";
+        }
+        function torles(){
+            const list = document.getElementById("nevsor");
+            list.removeChild(list.lastChild);
+        }
+    </script>      
+</body>
+</html>

@@ -44,7 +44,6 @@ button:disabled {
     transform: none;
 }
 
-/* Eredmény szöveg */
 #eredmeny_iras {
     margin-top: 20px;
     font-size: 1.5rem;

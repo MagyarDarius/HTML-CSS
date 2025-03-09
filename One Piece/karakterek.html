@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One piece</title>
+    <link rel="stylesheet" href="one piece.css" type="text/css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="nav-bar"><a href="Main.html" class="fejlec">Főoldal</a></li>
+                <li class="nav-bar"><a href="power system.html" class="fejlec">Erő rendszer</a></li>
+                <li class="nav-bar"><a href="karakterek.html" class="fejlec">Karakterek</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main-szoveg">
+            <label for="strawhats">Válassz egy Straw Hat tagot:</label>
+            <select name="strawhats" id="strawhats">
+                <option disabled selected value></option>
+                <option value="luffy">Monkey D. Luffy</option>
+                <option value="zoro">Roronoa Zoro</option>
+                <option value="nami">Nami</option>
+                <option value="usopp">Usopp</option>
+                <option value="sanji">Sanji</option>
+                <option value="chopper">Tony Tony Chopper</option>
+                <option value="robin">Nico Robin</option>
+                <option value="franky">Franky</option>
+                <option value="brook">Brook</option>
+                <option value="jinbei">Jinbei</option>
+            </select>
+            <div class="karakter-tartalom">
+                <p id="leirás"></p>
+                <img id="karakter_kep" id="karakter_kep">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p id="jog">&copy; Minden jog fenttartva</p>
+    </footer>
+    <script>
+        const karakterek = {
+            luffy: {
+                leiras: "Monkey D. Luffy a főhőse a One Piece sorozatnak, aki kalózkapitányként indult, hogy megszerezze a világ legnagyobb kincset, a One Piece-t. A célja, hogy a világ legerősebb kalóza legyen.",
+                kep: "luffy.png"
+            },
+            zoro: {
+                leiras: "Roronoa Zoro a háromkardos harcos és Luffy legelső társa. Az a célja, hogy ő legyen a világ legjobb kardforgatója, ezért folyamatosan fejleszti képességeit és harcol a legjobbakkal.",
+                kep: "zoro.png"
+            },
+            nami: {
+                leiras: "Nami a navigátor és egyben a csapat egyik legokosabb tagja. Ő a térképek mestere, és a legnagyobb álma, hogy megalkossa a világ legpontosabb térképét.",
+                kep: "nami.png"
+            },
+            usopp: {
+                leiras: "Usopp egy mesterlövész és a csapat hazudozója. Az ő álma, hogy a legnagyobb harcos legyen, és hogy Luffy legnagyobb segítője legyen.",
+                kep: "usopp.png"
+            },
+            sanji: {
+                leiras: "Sanji a csapat szakácsa, aki mindenki számára finom ételeket készít. Az álma, hogy megtalálja az All Blue-t, a világ minden tengerének keresztpontját.",
+                kep: "sanji.png"
+            },
+            chopper: {
+                leiras: "Tony Tony Chopper egy rénszarvas aki egy devil fruit segitségével kapott emberi tulajdonságokat, aki orvosként szolgál a csapatnak. Az ő álma, hogy megtalálja a világ legjobb orvosságát.",
+                kep: "chopper.png"
+            },
+            robin: {
+                leiras: "Nico Robin a csapat archeológusa, aki a világ történelmét kutatja. Az ő álma, hogy megtalálja a világ titkos történelmét.",
+                kep: "robin.png"
+            },
+            franky: {
+                leiras: "Franky egy szuper erős cyborg és a csapat hajójának, a Thousand Sunny-nak a készítője. Az álma, hogy építsen egy olyan hajót, amely képes az összes tenger meghóditani",
+                kep: "franky.png" 
+            },
+            brook: {
+                leiras: "Brook egy élőhalott zenész, aki a csapat egyik legviccesebb tagja. Az ő álma, hogy újra találkozhasson régi barátjával, Laboonnal.",
+                kep: "brook.png"
+            },
+            jinbei: {
+                leiras: "Jinbei egy hatalmas, emberi hal állat, aki a csapat erősebb harcosai közé tartozik. Az ő álma, hogy a halak és emberek közötti békét elősegítse.",
+                kep: "jinbei.png"
+            }
+        };
+
+        const selectElem = document.getElementById("strawhats");
+        const leirasElem = document.getElementById("leirás");
+        const kepElem = document.getElementById("karakter_kep");
+
+        selectElem.addEventListener("change", function() {
+            const valasztottKarakter = selectElem.value;
+            if (karakterek[valasztottKarakter]) {
+                leirasElem.textContent = karakterek[valasztottKarakter].leiras;
+                kepElem.src = karakterek[valasztottKarakter].kep;
+                kepElem.alt = `Kép ${valasztottKarakter}`;
+                kepElem.style.border = "2px white solid";
+            }
+        });
+    </script>
+</body>
+</html>

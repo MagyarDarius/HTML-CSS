@@ -1,6 +1,5 @@
 body, html{
-    background: url(background.png) no-repeat;
-    background-size: cover;
+    background: black;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -9,7 +8,7 @@ body, html{
 }
 header{
     background: gray;
-    height: 30px;
+    height: 40px;
     padding: 0;
     margin: 0;
     position: fixed;
@@ -30,6 +29,8 @@ footer{
 }
 main{
     flex: 1;
+    display: flex;
+    text-align: justify;
 }
 nav ul{
     margin: 0;
@@ -37,7 +38,7 @@ nav ul{
     display: flex;
     margin-left: 5px; 
 }
-li{
+.nav-bar{
     display: inline;
     font-size: 20px;
     margin-right: 20px;
@@ -50,4 +51,66 @@ a{
 #jog{
     font-size: 20px;
     margin-left: 10px;
+}
+.main-szoveg{
+    background: gray;
+    border: 2px white solid;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+.szoveg{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
+}
+p{
+    font-size: 20px;
+}
+h1{
+    font-size: 40px;
+}
+#nev{
+    font-weight: bold;
+}
+.fejlec{
+    font-size: 25px;
+}
+#crew{
+    display: block;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 2px white solid;
+}
+.power-system{
+    border: 2px white solid;
+    width: 500px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+label{
+    font-size: 30px;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+select{
+    font-size: 16px;
+}
+#karakter_kep{
+    margin-left: 20px;
+    width: 350px;
+    margin-bottom: 20px;
+}
+#leirás{
+    margin-left: 20px;
+    font-size: 20px;
+}
+img{
+    border-radius: 20px;
 }

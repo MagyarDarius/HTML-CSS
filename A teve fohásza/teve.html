@@ -65,7 +65,8 @@ levelkévét kivilevelhevelteve.</p>
 <img src="oazis.png" alt="Oázis" title="Oázis" class="tevekep" id="oazis">
 <p>Teve: </p><input type="number" id="tevek" value="1">
 <p>Strucc: </p><input type="number" id="struccok" value="1">
-<p><button onclick="gomb()">Tipp!</button></p> <p id="valasz"></p>
+<p><button onclick="gomb()">Tipp!</button></p>
+<p id="valasz"></p>
 
 </div>
 <script>
@@ -73,20 +74,18 @@ levelkévét kivilevelhevelteve.</p>
 	function gomb(){
 		var teve = document.getElementById("tevek").value;
 		var strucc = document.getElementById("struccok").value;
-		if(teve == 5 && strucc == 19){
+		if(teve== "" || strucc == ""){
+			alert("Hibás adat!");
+		}
+		else if(teve == 5 && strucc == 19){
 		document.getElementById("valasz").innerText="Helyes! 5 teve és 19 strucc";
 		}
 		else if(teve> 5){
-			document.getElementById("valasz").innerText="Ettől kevesebb teve van!";
+			alert("Ettől kevesebb teve van!");
 		}
 		else if(teve<5){
-			document.getElementById("valasz").innerText="Ettől több teve van";
+			alert("Ettől több teve van");
 		}
-		else if(teve== "" && strucc == ""){
-			document.getElementById("valasz").innerText="Hibbás adat!";
-		}
-		
-	
 	}
 			
 </script>

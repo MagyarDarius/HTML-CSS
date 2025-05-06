@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Színkeverő</title>
+    <link rel="stylesheet" href="színkeverő.css" type="text/css">
+</head>
+<body>
+  <div class="keret">
+    <h2>Színkeverő pult</h2>
+
+    <div class="szin-range">
+      <label for="r">R</label>
+      <input type="range" id="r-szam" min="0" max="255" value="50">
+      <span id="r">50</span>
+    </div>
+
+    <div class="szin-range">
+      <label for="g">G</label>
+      <input type="range" id="g-szam" min="0" max="255" value="150">
+      <span id="g">150</span>
+    </div>
+
+    <div class="szin-range">
+      <label for="b">B</label>
+      <input type="range" id="b-szam" min="0" max="255" value="255">
+      <span id="b">255</span>
+    </div>
+
+    <div class="hex-jelzes">
+      Aktuális háttérszín: 
+      <input type="text" id="hex" readonly>
+    </div>
+  </div>
+
+  <script>
+    const rRange = document.getElementById('r-szam');
+    const gRange = document.getElementById('g-szam');
+    const bRange = document.getElementById('b-szam');
+    const r = document.getElementById('r');
+    const g = document.getElementById('g');
+    const b = document.getElementById('b');
+    const hexIras = document.getElementById('hex');
+
+    function szin() {
+      const rSzam = parseInt(rRange.value);
+      const gSzam = parseInt(gRange.value);
+      const bSzam = parseInt(bRange.value);
+
+      r.textContent = rSzam;
+      g.textContent = gSzam;
+      b.textContent = bSzam;
+
+      const rHex = rSzam.toString(16).padStart(2, '0').toUpperCase();
+      const gHex = gSzam.toString(16).padStart(2, '0').toUpperCase();
+      const bHex = bSzam.toString(16).padStart(2, '0').toUpperCase();
+      const hex = '#' + rHex + gHex + bHex;
+      document.body.style.backgroundColor = hex;
+      hexIras.value = hex;
+    }
+
+    rRange.addEventListener('input', szin);
+    gRange.addEventListener('input', szin);
+    bRange.addEventListener('input', szin);
+
+   szin();
+    </script>
+</body>
+</html>

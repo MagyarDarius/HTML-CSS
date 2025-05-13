@@ -1,0 +1,13 @@
+body{
+    text-align: center;
+}
+#bricks {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+.brick {
+    width: 200px;
+    height: 20px;
+}
